@@ -4,6 +4,6 @@ public class Assignment1 {
         int counter = 0;
         String input;
         Scanner sc = new Scanner(System.in);
-        // dlkdjsd
+        System.out.println("Hello! Enter numbers to add to the counter.");
     }
 }
