@@ -2,14 +2,19 @@ import java.util.*;
 public class Assignment1 {
     public static void main(String[] args) {
         int counter = 0;
-        String input;
+        int input;
         boolean isInt = true;
         Scanner sc = new Scanner(System.in);
         System.out.println("Hello! Enter integers to add to the counter. If you want to stop, type 'break'.");
         
         while (isInt) {
             if (sc.hasNextInt()) {
-                counter += sc.nextInt();
+                input = sc.nextInt();
+                if (input == 123456789) {
+                    System.out.println("Congrats! You found a secret..");
+                    break;
+                }
+                counter += input;
                 System.out.println("Counter: " + counter);
             } 
             else {
