@@ -6,7 +6,7 @@ public class Assignment1 {
         int input;
         boolean isInt = true;
         Scanner sc = new Scanner(System.in);  // created a scanner to read the input of the question below
-        System.out.println("Hello! Enter integers to add to the counter. If you want to stop, type 'break'.");
+        System.out.println("Hello! Enter integers to add to the counter. If you want to stop, type 'break', and the program will tell you if the number is even or odd.");
         
         while (isInt) {  // uses boolean as a placeholder to allow this while loop to run
             if (sc.hasNextInt()) {  // if the input is an integer:
@@ -21,6 +21,8 @@ public class Assignment1 {
             } 
             else {  // if the input isn't an int
                 System.out.println("Thanks for playing!\nCounter: " + counter);
+                if (counter%2 == 0) System.out.println("This number is an even number.");  // checks if the int is divisble by 2, then prints it's an even number
+                else System.out.println("This number is an odd number.");  // if the int isn't divisble by 2, it prints it's an odd number
                 break;  // ends the loop
             }
         }
