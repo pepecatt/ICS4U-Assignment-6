@@ -12,6 +12,7 @@ public class Assignment1 {
                 input = sc.nextInt();
                 if (input == 123456789) {
                     System.out.println("Congrats! You found a secret..");
+                    System.out.println("=^.^=");
                     break;
                 }
                 counter += input;
