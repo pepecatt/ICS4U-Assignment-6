@@ -19,7 +19,7 @@ document
         }
         document.getElementById('result').value = heronsFormula(a, b, c);
         document.write(result);
-    })
+    });
 
 
 
