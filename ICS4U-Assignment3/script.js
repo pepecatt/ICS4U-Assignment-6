@@ -11,14 +11,12 @@ document
         const b = parseFloat(document.getElementById('sideB').value);
         const c = parseFloat(document.getElementById('sideC').value);
 
-        // Check for valid triangle sides
         if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a) {
             document.getElementById('heronsResult').value = "Invalid input(s).";
             console.log("Invalid");
             return;
         }
 
-        // Calculate area if valid
         document.getElementById('heronsResult').value = heronsFormula(a, b, c);
     });
 
@@ -104,7 +102,6 @@ document
     .addEventListener("click", function () {
         const string = document.getElementById('coefficients').value;
         const coefficients = string.split(" ");
-        //console.log(coefficients[0]);
         const string2 = document.getElementById('exponents').value;
         const exponents = string2.split(" ");
         const x = document.getElementById('x').value;
@@ -124,7 +121,6 @@ document
 
 function newtons(g) {
     g = parseFloat(g);
-    console.log("a");
     function f(x) {
         return 6 * x ** 4 - 13 * x ** 3 - 18 * x ** 2 + 7 * x + 6;
     }
@@ -138,10 +134,10 @@ function newtons(g) {
     do {
         newGuess = g - f(g) / deriv(g);
         if (Math.abs(g - newGuess) < 0.1) {
-            g = newGuess;
             rootGuess = true;
-            console.log("true: " + newGuess);
         }
+        g = newGuess;
+        console.log(newGuess);
     } while (!rootGuess);
     
     return newGuess;

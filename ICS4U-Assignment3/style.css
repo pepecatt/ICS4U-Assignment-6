@@ -18,8 +18,8 @@ h1 {
 }
 
 .container {
-    display: grid;              /* Enable CSS Grid */
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
 }
 
