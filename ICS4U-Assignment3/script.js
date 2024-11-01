@@ -120,3 +120,36 @@ document
         document.getElementById("function").innerHTML = "Function: " + poly[0];
         document.getElementById("polyResult").value = poly[1];
     });
+
+
+function newtons(g) {
+    g = parseFloat(g);
+    console.log("a");
+    function f(x) {
+        return 6 * x ** 4 - 13 * x ** 3 - 18 * x ** 2 + 7 * x + 6;
+    }
+    function deriv(x) {
+        return 24 * x ** 3 - 39 * x ** 2 - 36 * x;
+    }
+
+    var newGuess = 0;
+    var rootGuess = false;
+
+    do {
+        newGuess = g - f(g) / deriv(g);
+        if (Math.abs(g - newGuess) < 0.1) {
+            g = newGuess;
+            rootGuess = true;
+            console.log("true: " + newGuess);
+        }
+    } while (!rootGuess);
+    
+    return newGuess;
+}
+
+document
+    .getElementById("calculateNewt")
+    .addEventListener("click", function() {
+        const guess = document.getElementById("root").value;
+        document.getElementById("newtResult").value = newtons(guess);
+    });
