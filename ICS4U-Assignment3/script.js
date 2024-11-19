@@ -46,19 +46,19 @@ function ambiguousCase(angle, a, b) {
 }
 
 document
-    .getElementById("calculateAmb")
-    .addEventListener("click", function () {
-        const angle = parseFloat(document.getElementById('angleA').value);
-        const a = parseFloat(document.getElementById('sideA2').value);
-        const b = parseFloat(document.getElementById('sideB2').value);
+.getElementById("calculateAmb")
+.addEventListener("click", function () {
+    const angle = parseFloat(document.getElementById('angleA').value);
+    const a = parseFloat(document.getElementById('sideA2').value);
+    const b = parseFloat(document.getElementById('sideB2').value);
 
-        if (angle < 0 || angle > 180 || a < 0 || b < 0) {
-            document.getElementById("ambResult").value = "Invalid input(s).";
-            return;
-        }
+    if (angle < 0 || angle > 180 || a < 0 || b < 0) {
+        document.getElementById("ambResult").value = "Invalid input(s).";
+        return;
+    }
 
-        document.getElementById("ambResult").value = ambiguousCase(angle, a, b);
-    });
+    document.getElementById("ambResult").value = ambiguousCase(angle, a, b);
+});
 
 
 function polynomial(coefficients, exponents, x) {
@@ -105,13 +105,6 @@ document
         const string2 = document.getElementById('exponents').value;
         const exponents = string2.split(" ");
         const x = document.getElementById('x').value;
-
-        // for (let i=0; i<3; i++) {
-        //     if (!isNaN(array[i])) {
-        //         document.getElementById("polyResult").value = "Invalid input(s).";
-        //         return;
-        //     }
-        // }
 
         const poly = polynomial(coefficients, exponents, x);
         document.getElementById("function").innerHTML = "Function: " + poly[0];
