@@ -4,16 +4,10 @@
     --right-position: 60px;
 }
 
-* {
-    margin: 0px;
-}
-
 .mainPage {
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: rgb(27, 18, 18);
-    background-repeat: no-repeat;
+    left: 0px;
 }
 /*
 /* 1280, 1024*/

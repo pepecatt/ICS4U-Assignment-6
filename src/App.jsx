@@ -1,25 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeView from "./views/HomeView";
-//import HomeView from "../src/views/HomeView";
-//import RegisterView from "../src/views/RegisterView";
+import LoginView from "./views/LoginView";
+//import RegisterView from ".views/RegisterView";
 import './App.css'
 
 function App() {
 
   return (
-    <div>
-      <HomeView/>
-    </div>
-
-    /*
-    <StoreProvider>
-      <BrowserRouter>
+    <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomeView />} />
-          <Route path="/register" element={<RegisterView />} />
+          <Route path="" element={<HomeView />} />
+          <Route path="/login" element={<LoginView />} />
         </Routes>
       </BrowserRouter>
-    </StoreProvider> */
+
+    /*
+    <Route path="/register" element={<RegisterView />} />
+    <Route path="/genre" element={<GenreView />} />
+    */
   )
 }
 
