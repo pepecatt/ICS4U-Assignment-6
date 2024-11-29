@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-body {
-    background-color: rgb(20, 14, 14);
-}
-
-.footer {
+.footerBackground {
     position: absolute;
-    bottom: -80px;
-    left: 27%;
-    opacity: 60%;
+    bottom: -250px;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    background-color: rgb(20, 14, 14); /* 20, 14, 14 */
 }
 
 .aboutus {
@@ -19,7 +17,10 @@ body {
     font-style: light;
     letter-spacing: 1px;
     font-size: 25px;
-    opacity: 80%;
+    position: absolute;
+    bottom: -80px;
+    left: 27%;
+    opacity: 60%;
 }
 
 .footerlinks {
@@ -36,19 +37,7 @@ body {
     font-size: 20px;
 }
 
-.TC {
-    color: white;
-    padding: 10px;
-    display: flex;
-}
-
-.github {
-    color: white;
-    padding: 10px;
-    display: flex;
-}
-
-.tutorial {
+.footerlinks > a {
     color: white;
     padding: 10px;
     display: flex;

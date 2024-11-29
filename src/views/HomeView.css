@@ -1,13 +1,10 @@
-:root {
-    --button-font: "Rubik";
-    --button-radius: 3px;
-    --right-position: 60px;
-}
-
 .mainPage {
     position: absolute;
     width: 100%;
     left: 0px;
 }
-/*
-/* 1280, 1024*/
+
+.footerr {
+    background-color: green;
+    color: purple;
+}

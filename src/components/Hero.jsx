@@ -4,8 +4,6 @@ import PopcornBag from "../assets/popcornbag.png";
 function Hero() {
     return (
         <>
-            <div className="background"></div>
-
             <div className="homepage">
                 <h1>Endless popcorn binging</h1>
                 <p className="startsatpi-text">Starts at $3.14. Cancel anytime.</p>
@@ -14,8 +12,6 @@ function Hero() {
                     <button className="getstarted-button">Get Started &#62;</button>
                 </div>
             </div>
-
-            <img className="popcornbag" src={PopcornBag}></img>
 
         </>
     )

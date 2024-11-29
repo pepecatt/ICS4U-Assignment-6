@@ -1,6 +1,7 @@
 import './Feature.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
+import PopcornBag from "../assets/popcornbag.png";
 
 function Feature() {
     const [image1, setImage1] = useState([]);
@@ -25,38 +26,41 @@ function Feature() {
     }, [])
 
     return (
-        <div className="movies">
-            <div className='movierow1'>
-                <img
-                    className="movie"
-                    src={`https://image.tmdb.org/t/p/w500${image1}`}
-                />
+        <>
+            <div className="movies">
+                <div className='movierow1'>
+                    <img
+                        className="movie"
+                        src={`https://image.tmdb.org/t/p/w500${image1}`}
+                    />
+                </div>
+                <div className="movierow2">
+                    <img
+                        className="movie"
+                        src={`https://image.tmdb.org/t/p/w500${image2}`}
+                    />
+                    <img
+                        className="movie"
+                        src={`https://image.tmdb.org/t/p/w500${image3}`}
+                    />
+                </div>
+                <div className="movierow3">
+                    <img
+                        className="movie"
+                        src={`https://image.tmdb.org/t/p/w500${image4}`}
+                    />
+                    <img
+                        className="movie"
+                        src={`https://image.tmdb.org/t/p/w500${image5}`}
+                    />
+                    <img
+                        className="movie"
+                        src={`https://image.tmdb.org/t/p/w500${image6}`}
+                    />
+                </div>
             </div>
-            <div className="movierow2">
-                <img
-                    className="movie"
-                    src={`https://image.tmdb.org/t/p/w500${image2}`}
-                />
-                <img
-                    className="movie"
-                    src={`https://image.tmdb.org/t/p/w500${image3}`}
-                />
-            </div>
-            <div className="movierow3">
-                <img
-                    className="movie"
-                    src={`https://image.tmdb.org/t/p/w500${image4}`}
-                />
-                <img
-                    className="movie"
-                    src={`https://image.tmdb.org/t/p/w500${image5}`}
-                />
-                <img
-                    className="movie"
-                    src={`https://image.tmdb.org/t/p/w500${image6}`}
-                />
-            </div>
-        </div>
+            <img className="popcornbag" src={PopcornBag}></img>
+        </>
     )
 }
 

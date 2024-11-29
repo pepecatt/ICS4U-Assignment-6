@@ -7,12 +7,16 @@ import Footer from "../components/Footer";
 function HomeView() {
     return (
         <>
+            <div className="footerBackground"></div>
             <div className="mainPage">
+                <div className="background"></div>
                 <Feature />
                 <Hero />
+                
                 <Header />
             </div>
             <Footer />
+            
         </>
     )
 }

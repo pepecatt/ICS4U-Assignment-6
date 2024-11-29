@@ -11,7 +11,7 @@ function Header() {
     return(
         <>
             <h1 className="Popflix">Popflix</h1>
-            <button className="signin" onClick={() => { loginPage()}}>Sign In</button>
+            <button className="signIn" onClick={() => { loginPage()}}>Sign In</button>
         </>
     )
 }

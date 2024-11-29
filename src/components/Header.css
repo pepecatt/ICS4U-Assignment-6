@@ -24,9 +24,10 @@
     left: 10px;
     top: 5px;
     opacity: 100%;
+    letter-spacing: 1px;
 }
 
-.signin {
+.signIn {
     background-color: white;
     height: 40px;
     width: 100px;
@@ -46,7 +47,7 @@
     transition: background-color 0.3s, color 0.1s;
 }
 
-.signin:hover {
+.signIn:hover {
     background-color: rgb(233, 11, 11);
     color: white;
 }
