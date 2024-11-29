@@ -25,14 +25,14 @@ function Feature() {
     }, [])
 
     return (
-        <div class="movies">
-            <div class='movierow1'>
+        <div className="movies">
+            <div className='movierow1'>
                 <img
                     className="movie"
                     src={`https://image.tmdb.org/t/p/w500${image1}`}
                 />
             </div>
-            <div class="movierow2">
+            <div className="movierow2">
                 <img
                     className="movie"
                     src={`https://image.tmdb.org/t/p/w500${image2}`}
@@ -42,7 +42,7 @@ function Feature() {
                     src={`https://image.tmdb.org/t/p/w500${image3}`}
                 />
             </div>
-            <div class="movierow3">
+            <div className="movierow3">
                 <img
                     className="movie"
                     src={`https://image.tmdb.org/t/p/w500${image4}`}
@@ -55,10 +55,6 @@ function Feature() {
                     className="movie"
                     src={`https://image.tmdb.org/t/p/w500${image6}`}
                 />
-            </div>
-
-            <div class="popcorn">
-                <img class="popcornbag" src="popcorn1.png"></img>
             </div>
         </div>
     )

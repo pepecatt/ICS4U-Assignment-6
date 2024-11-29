@@ -7,9 +7,11 @@ import Footer from "../components/Footer";
 function HomeView() {
     return (
         <>
-            <Header />
-            <Hero />
-            <Feature />
+            <div className="mainPage">
+                <Feature />
+                <Hero />
+                <Header />
+            </div>
             <Footer />
         </>
     )

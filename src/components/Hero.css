@@ -12,7 +12,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(27, 18, 18);
+    /*background-color: rgb(147, 118, 118);  /*27, 18, 18*/
     background-repeat: no-repeat;
 }
 
@@ -81,6 +81,8 @@ h1 {
     background-color: rgb(187, 11, 20);
 }
 
-body {
-    background-color: rgb(20, 14, 14);
+.popcornbag {
+    position: absolute; top: 470px; right: 0px;
+    width: 520px;
+    height: 580px;
 }

@@ -1,19 +1,21 @@
-import './Hero.css'
+import './Hero.css';
+import PopcornBag from "../assets/popcornbag.png";
 
 function Hero() {
     return (
-        <div>
-            <div class="background"></div>
-
-            <div class="homepage">
+        <>
+            <div className="background"></div>
+    
+            <div className="homepage">
                 <h1>Endless popcorn binging</h1>
-                <p class="startsatpi-text">Starts at $3.14. Cancel anytime.</p>
-
-                <input class="email-inputbox" type="text" placeholder="Email"></input>
-                <button class="getstarted-button">Get Started &#62;</button>
+                <p className="startsatpi-text">Starts at $3.14. Cancel anytime.</p>
+                <input className="email-inputbox" type="text" placeholder="Email"></input>
+                <button className="getstarted-button">Get Started &#62;</button>
             </div>
 
-        </div>
+            <img className="popcornbag" src={PopcornBag}></img>
+
+        </>
     )
 }
 
