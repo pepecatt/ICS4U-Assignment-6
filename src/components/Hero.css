@@ -14,7 +14,7 @@
 
 .background {
     position: absolute;
-    width: 100%;
+    width: 100vh;
     height: 100vh;
     background-color: rgb(27, 18, 18);  /*27, 18, 18*/
     background-repeat: no-repeat;
@@ -87,10 +87,4 @@ h1 {
 
 .getstarted-button:hover {
     background-color: rgb(187, 11, 20);
-}
-
-.popcornbag {
-    position: absolute; top: 470px; right: 0px;
-    width: 520px;
-    height: 580px;
 }

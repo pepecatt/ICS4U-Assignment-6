@@ -1,9 +1,9 @@
 import './Hero.css';
-import PopcornBag from "../assets/popcornbag.png";
 
 function Hero() {
     return (
         <>
+        
             <div className="homepage">
                 <h1>Endless popcorn binging</h1>
                 <p className="startsatpi-text">Starts at $3.14. Cancel anytime.</p>

@@ -1,6 +1,6 @@
-import './Feature.css';
 import { useState, useEffect } from "react";
 import axios from "axios";
+import './Feature.css';
 import PopcornBag from "../assets/popcornbag.png";
 
 function Feature() {
@@ -16,12 +16,12 @@ function Feature() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-            setImage1(response.data.results[Math.floor(Math.random() * 20)].poster_path);
-            setImage2(response.data.results[Math.floor(Math.random() * 20)].poster_path);
-            setImage3(response.data.results[Math.floor(Math.random() * 20)].poster_path);
-            setImage4(response.data.results[Math.floor(Math.random() * 20)].poster_path);
-            setImage5(response.data.results[Math.floor(Math.random() * 20)].poster_path);
-            setImage6(response.data.results[Math.floor(Math.random() * 20)].poster_path);
+            setImage1(response.data.results[Math.floor(Math.random() * 3)].poster_path);
+            setImage2(response.data.results[Math.floor(Math.random() * 3 + 3)].poster_path);
+            setImage3(response.data.results[Math.floor(Math.random() * 3 + 6)].poster_path);
+            setImage4(response.data.results[Math.floor(Math.random() * 3 + 9)].poster_path);
+            setImage5(response.data.results[Math.floor(Math.random() * 4 + 12)].poster_path);
+            setImage6(response.data.results[Math.floor(Math.random() * 4 + 16)].poster_path);
         })()
     }, [])
 

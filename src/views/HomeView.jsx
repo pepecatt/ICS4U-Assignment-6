@@ -8,8 +8,8 @@ function HomeView() {
     return (
         <>
             <div className="footerBackground"></div>
+            <div className="spotlight"></div>
             <div className="mainPage">
-                <div className="background"></div>
                 <Feature />
                 <Hero />
                 
