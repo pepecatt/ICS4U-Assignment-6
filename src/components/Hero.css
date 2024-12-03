@@ -12,14 +12,6 @@
     margin: 0px;
 }
 
-.background {
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
-    background-color: rgb(27, 18, 18);  /*27, 18, 18*/
-    background-repeat: no-repeat;
-}
-
 .homepage {
     position: absolute;
     display: inline-block;
@@ -52,7 +44,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.email-inputbox {
+.homepage input {
     height: 55px;
     width: 340px;
     border: none;
@@ -67,9 +59,9 @@ h1 {
     padding: 5px;
 }
 
-.getstarted-button {
+.homepage button {
     background-color: rgb(218, 4, 4);
-    height: 63px;
+    height: 64px;
     width: 170px;
     border: none;
     border-radius: var(--button-radius);

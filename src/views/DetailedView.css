@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Main container for the movie details */
+.detail-container {
+    padding: 20px;
+    background-color: rgb(27, 18, 18);
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Movie title */
+.detail-container h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.movie-details {
+    font-family: "Karla";
+}
+
+/* Tagline under the title */
+.tagline {
+    font-size: 25px;
+    color: #cdcdcd;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Movie overview */
+.overview {
+    font-size: 20px;
+    color: #d3d3d3;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Container for the additional movie details like release date and runtime */
+.details-info {
+    font-size: 20px;
+    color: #bbb8b8;
+    margin-bottom: 5px;
+}
+
+/* Poster image styles */
+.detail-poster {
+    width: 250px; /* Fixed width for poster */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow around poster */
+}
+
+/* Trailers section */
+.trailers-section {
+    padding: 20px;
+    position: relative;
+    bottom: -60px;
+    margin: 0px;
+    left: 170px;
+}
+
+.trailers-section h2 {
+    font-family: "arial";
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 80%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Grid layout for trailer thumbnails */
+.trailers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr)); /* Auto fill columns based on available space */
+    gap: 20px;
+    justify-items: center; /* Center items horizontally within each grid cell */
+    margin-left: 20px;
+    max-width: 1300px;
+}
+
+/* Individual trailer tile */
+.trailer-tile {
+    background-color: #3f2f2f;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px;
+}
+
+.trailer-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Thumbnail for each trailer */
+.trailer-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Title for each trailer */
+.trailer-tile h3 {
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: #c4c4c4;
+}
+
+/* Styling for links */
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -3,15 +3,15 @@ import './Header.css';
 
 function Header() {
     const navigate = useNavigate();
-    
+
     function loginPage() {
         navigate(`/login`);
     }
 
-    return(
+    return (
         <>
             <h1 className="Popflix">Popflix</h1>
-            <button className="signIn" onClick={() => { loginPage()}}>Sign In</button>
+            <button className="signIn" onClick={() => { loginPage() }}>Sign In</button>
         </>
     )
 }

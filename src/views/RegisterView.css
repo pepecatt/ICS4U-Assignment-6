@@ -1,0 +1,42 @@
+.register-container {
+    background-color: rgb(27, 18, 18);  /*27, 18, 18*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    align-items: center;
+}
+
+.register-container button {
+    padding: 12px;
+    background-color: rgb(218, 4, 4); /*218, 4, 4*/
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+    background-color: rgb(187, 11, 20);
+}
+
+.register-container p {
+    color: rgb(156, 127, 127);
+    font-family: "Karla";
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.Popflix {
+    color: rgb(124, 113, 113);
+    text-shadow: 1px 1px 3px rgb(78, 50, 50);
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 35px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
