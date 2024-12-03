@@ -1,18 +1,17 @@
 /* Style for the genre container */
 .genre-container {
-  background-color: #fff;
   max-width: 300px;
   padding: 20px;
   position: fixed;
   left: 0px;
-  top: 0px;
+  top: 70px;
   font-family: "Rubik";
 }
 
 .genre-container h {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #d8d7d7;
   text-align: center;
 }
 
@@ -25,15 +24,15 @@
 .genre-container li {
   padding: 10px 15px;
   font-size: 18px;
-  color: #333;
+  color: #d8d7d7;
   cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px rgb(20, 14, 14);
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 /* Hover effect on genre items */
 .genre-container li:hover {
-  background-color: #f0f0f0;
+  background-color: rgb(61, 43, 43);
   transform: scale(1.05);
 }
 
@@ -41,4 +40,9 @@
   outline: none;
   background-color: #e0e0e0;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.Popflix {
+  color: rgb(124, 113, 113);
+  text-shadow: 1px 1px 3px rgb(78, 50, 50);
 }

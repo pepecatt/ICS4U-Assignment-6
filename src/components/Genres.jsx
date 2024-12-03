@@ -13,16 +13,19 @@ function Genres(props) {
     }
 
     return (
-        <div className='genre-container'>
-            <h>Genres</h>
-            <ol>
-                {props.genreList.map((item) => (
-                    <li key={item.id} onClick={() => click(item)}>
-                        {item.genre}
-                    </li>
-                ))}
-            </ol>
-        </div>
+        <>
+            <h1 className="Popflix">Popflix</h1>
+            <div className='genre-container'>
+                <h>Genres</h>
+                <ol>
+                    {props.genreList.map((item) => (
+                        <li key={item.id} onClick={() => click(item)}>
+                            {item.genre}
+                        </li>
+                    ))}
+                </ol>
+            </div>
+        </>
     )
 }
 

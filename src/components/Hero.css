@@ -77,6 +77,6 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.getstarted-button:hover {
+.homepage button:hover {
     background-color: rgb(187, 11, 20);
 }

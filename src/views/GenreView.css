@@ -28,7 +28,6 @@ body {
 
 /* Style for each individual movie card */
 .movie-card {
-    background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
@@ -48,11 +47,12 @@ body {
     display: block; 
 }
 
+/* div containing the page information + previous and next buttons */
 .pages {
     display: flex;
     column-gap: 40px;
     position: relative;
-    right: 0px;
+    right: -20px;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;

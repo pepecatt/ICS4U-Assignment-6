@@ -2,9 +2,9 @@
 
 .footerBackground {
     position: absolute;
-    bottom: -250px;
+    bottom: -210px;
     width: 100%;
-    height: 250px;
+    height: 200px;
     left: 0px;
     background-color: rgb(20, 14, 14); /* 20, 14, 14 */
 }
