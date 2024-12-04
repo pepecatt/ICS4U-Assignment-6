@@ -14,7 +14,7 @@ function GenresView() {
         12: "Adventure",
         16: "Animation",
         80: "Comedy",
-        18: "Drama",
+        10770: "TV",
         36: "Horror",
         9648: "Mystery",
         14: "Fantasy",
@@ -22,12 +22,14 @@ function GenresView() {
         53: "Thriller",
     };
     const genreName = genreNames[id];
+    console.log(genreName);
 
     useEffect(() => {
         async function getMovies() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_TMDB_KEY}&with_genres=${id}&page=${page}`
             );
+            console.log(response.data.results);
             setMovies(response.data.results);
             setTotalPages(response.data.total_pages);
         }
