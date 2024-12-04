@@ -4,24 +4,18 @@ import './Feature.css';
 import PopcornBag from "../assets/popcornbag.png";
 
 function Feature() {
-    const [image1, setImage1] = useState([]);
-    const [image2, setImage2] = useState([]);
-    const [image3, setImage3] = useState([]);
-    const [image4, setImage4] = useState([]);
-    const [image5, setImage5] = useState([]);
-    const [image6, setImage6] = useState([]);
+    const [features, setFeatures] = useState([]);
 
     useEffect(() => {
         (async function getImages() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-            setImage1(response.data.results[Math.floor(Math.random() * 3)].poster_path);
-            setImage2(response.data.results[Math.floor(Math.random() * 3 + 3)].poster_path);
-            setImage3(response.data.results[Math.floor(Math.random() * 3 + 6)].poster_path);
-            setImage4(response.data.results[Math.floor(Math.random() * 3 + 9)].poster_path);
-            setImage5(response.data.results[Math.floor(Math.random() * 4 + 12)].poster_path);
-            setImage6(response.data.results[Math.floor(Math.random() * 4 + 16)].poster_path);
+
+            setFeatures(response.data.results
+                .map(value => ({ value, sort: Math.random() }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({ value }) => value))
         })()
     }, [])
 
@@ -29,38 +23,41 @@ function Feature() {
         <>
             <div className="movies">
                 <div className='movierow1'>
-                    <img
-                        className="movie"
-                        src={`https://image.tmdb.org/t/p/w500${image1}`}
-                    />
+                    {features[0] && (
+                        <img
+                            className="movie"
+                            src={`https://image.tmdb.org/t/p/w500${features[0].poster_path}`}
+                        />
+                    )}
                 </div>
                 <div className="movierow2">
                     <img
                         className="movie"
-                        src={`https://image.tmdb.org/t/p/w500${image2}`}
+                        src={`https://image.tmdb.org/t/p/w500${features[1].poster_path}`}
                     />
                     <img
                         className="movie"
-                        src={`https://image.tmdb.org/t/p/w500${image3}`}
+                        src={`https://image.tmdb.org/t/p/w500${features[2].poster_path}`}
                     />
                 </div>
                 <div className="movierow3">
                     <img
                         className="movie"
-                        src={`https://image.tmdb.org/t/p/w500${image4}`}
+                        src={`https://image.tmdb.org/t/p/w500${features[3].poster_path}`}
                     />
                     <img
                         className="movie"
-                        src={`https://image.tmdb.org/t/p/w500${image5}`}
+                        src={`https://image.tmdb.org/t/p/w500${features[4].poster_path}`}
                     />
                     <img
                         className="movie"
-                        src={`https://image.tmdb.org/t/p/w500${image6}`}
+                        src={`https://image.tmdb.org/t/p/w500${features[5].poster_path}`}
                     />
                 </div>
             </div>
             <img className="popcornbag" src={PopcornBag}></img>
         </>
+
     )
 }
 
