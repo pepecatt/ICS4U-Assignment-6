@@ -1,5 +1,5 @@
 import './LoginView.css';
-import { useState} from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginView() {
@@ -23,16 +23,16 @@ function LoginView() {
             <div className='login'>
                 <form onSubmit={(event) => { login(event) }}>
                     <label>Sign In</label>
-                    <input 
-                        type="text" 
-                        value={email} 
-                        onChange={(event) => { setEmail(event.target.value) }} 
+                    <input
+                        type="text"
+                        value={email}
+                        onChange={(event) => { setEmail(event.target.value) }}
                         placeholder="Email"
                         required />
-                    <input 
-                        type="text" 
-                        value={password} 
-                        onChange={(event) => { setPassword(event.target.value) }} 
+                    <input
+                        type="text"
+                        value={password}
+                        onChange={(event) => { setPassword(event.target.value) }}
                         placeholder="Password"
                         required />
                     <button type="submit">Sign In</button>

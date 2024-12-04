@@ -12,13 +12,13 @@ function Feature() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-
             setFeatures(
                 response.data.results
                     .map(value => ({ value, sort: Math.random() }))
                     .sort((a, b) => a.sort - b.sort)
                     .map(({ value }) => value)
             );
+
             setIsLoading(false);
         })();
     }, []);
@@ -31,12 +31,10 @@ function Feature() {
         <>
             <div className="movies">
                 <div className='movierow1'>
-
                     <img
                         className="movie"
                         src={`https://image.tmdb.org/t/p/w500${features[0].poster_path}`}
                     />
-
                 </div>
                 <div className="movierow2">
                     <img

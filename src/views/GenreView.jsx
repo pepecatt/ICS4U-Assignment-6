@@ -25,7 +25,7 @@ function GenresView() {
     const genreName = genreNames[id];
 
     useEffect(() => {
-        window.scrollTo(0, 0); 
+        window.scrollTo(0, 0);
         if (id !== previousId) {
             setPage(1);
             setPreviousId(id);

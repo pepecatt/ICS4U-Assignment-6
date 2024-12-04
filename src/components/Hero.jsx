@@ -15,7 +15,7 @@ function Hero() {
                 <p className="startsatpi-text">Starts at $3.14. Cancel anytime.</p>
                 <div className='email-getStarted'>
                     <input type="text" placeholder="Email"></input>
-                    <button onClick = {() => { registerPage() }} >Get Started &#62;</button>
+                    <button onClick={() => { registerPage() }} >Get Started &#62;</button>
                 </div>
             </div>
 

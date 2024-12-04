@@ -12,11 +12,11 @@ function HomeView() {
             <div className="mainPage">
                 <Feature />
                 <Hero />
-                
+
                 <Header />
             </div>
             <Footer />
-            
+
         </>
     )
 }

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./RegisterView.css";
 
 function RegisterView() {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     return (
         <div className="register-container">
@@ -11,16 +11,24 @@ function RegisterView() {
             <div className='register'>
                 <form action="#">
                     <label>Create an Account</label>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
+                        placeholder="First Name"
+                        required />
+                    <input
+                        type="text"
+                        placeholder="Last Name"
+                        required />
+                    <input
+                        type="text"
                         placeholder="Email"
                         required />
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         placeholder="Password"
                         required />
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         placeholder="Confirm Password"
                         required />
                     <button type="submit">Register</button>
