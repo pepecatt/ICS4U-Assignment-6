@@ -7,7 +7,7 @@
 }
 
 .login-container {
-    background-color: rgb(27, 18, 18);  /*27, 18, 18*/
+    background-color: rgb(27, 18, 18);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ input:focus {
 
 .login-container button {
     padding: 12px;
-    background-color: rgb(218, 4, 4); /*218, 4, 4*/
+    background-color: rgb(218, 4, 4);
     color: white;
     border: none;
     border-radius: 5px;

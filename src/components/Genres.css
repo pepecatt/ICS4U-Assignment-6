@@ -1,4 +1,3 @@
-/* Style for the genre container */
 .genre-container {
   max-width: 300px;
   padding: 20px;
@@ -8,11 +7,11 @@
   font-family: "Rubik";
 }
 
-.genre-container h {
+.genre-container h2 {
   font-size: 24px;
   font-weight: bold;
   color: #d8d7d7;
-  text-align: center;
+  text-align: left;
 }
 
 .genre-container ol {
@@ -30,7 +29,6 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover effect on genre items */
 .genre-container li:hover {
   background-color: rgb(61, 43, 43);
   transform: scale(1.05);
@@ -45,4 +43,5 @@
 .Popflix {
   color: rgb(124, 113, 113);
   text-shadow: 1px 1px 3px rgb(78, 50, 50);
+  position: fixed;
 }

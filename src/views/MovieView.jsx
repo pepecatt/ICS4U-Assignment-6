@@ -1,6 +1,5 @@
 import Genre from "../components/Genres";
 import { Outlet } from "react-router-dom";
-import "./MovieView.css";
 
 function MovieView() {
     const genres = [
@@ -8,12 +7,12 @@ function MovieView() {
         { id: 12, genre: "Adventure" },
         { id: 16, genre: "Animation" },
         { id: 80, genre: "Comedy" },
-        { id: 10770, genre: "TV" },
+        { id: 14, genre: "Fantasy" },
         { id: 36, genre: "Horror" },
         { id: 9648, genre: "Mystery" },
-        { id: 14, genre: "Fantasy" },
         { id: 10402, genre: "Music" },
-        { id: 53, genre: "Thriller" }
+        { id: 53, genre: "Thriller" },
+        { id: 10770, genre: "TV" }
     ];
 
     return (

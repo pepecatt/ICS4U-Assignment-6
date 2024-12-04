@@ -4,7 +4,6 @@ body {
     background-color: rgb(27, 18, 18);
 }
 
-/* Style for the page heading */
 .genreView-container h1 {
     font-size: 50px;
     font-weight: bold;
@@ -15,7 +14,6 @@ body {
     left: 225px;
 }
 
-/* Style for the movie list container */
 .movie-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
@@ -26,7 +24,6 @@ body {
     left: 225px;
 }
 
-/* Style for each individual movie card */
 .movie-card {
     border-radius: 8px;
     overflow: hidden;
@@ -40,14 +37,12 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 1); 
 }
 
-/* Style for the movie poster image */
 .movie-poster {
     width: 100%; 
     height: auto;
     display: block; 
 }
 
-/* div containing the page information + previous and next buttons */
 .pages {
     display: flex;
     column-gap: 40px;
@@ -58,14 +53,12 @@ body {
     margin-bottom: 40px;
 }
 
-/* Style for the page title showing current page number */
 .page-number {
     font-size: 20px;
     color: #a1a0a0;
     text-align: center; 
 }
 
-/* Style for the pagination buttons container */
 .genre-buttons {
     display: flex;
     justify-content: center; 
@@ -73,7 +66,6 @@ body {
     margin-top: 20px; 
 }
 
-/* Style for each pagination button */
 .page-button {
     background-color: #ae0b0b; 
     color: #fff; 

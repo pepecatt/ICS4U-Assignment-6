@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+
 import "./DetailedView.css";
 
 function DetailedView() {
@@ -24,15 +25,19 @@ function DetailedView() {
                     <img
                         className="detail-poster"
                         src={`https://image.tmdb.org/t/p/w500${details.poster_path}`}
-                        alt={details.original_title}
+                        alt={details.title}
                     />
                 )}
                 <div className="movie-details">
-                    <h1>{details.original_title}</h1>
+                    <label>{details.title}</label>
+                    <p className="ogTitle">Original Title: {details.original_title}</p>
                     <p className="tagline">{details.tagline}</p>
                     <p className="overview">{details.overview}</p>
                     <p className="details-info"><strong>Release Date:</strong> {details.release_date}</p>
                     <p className="details-info"><strong>Runtime:</strong> {details.runtime} minutes</p>
+                    {details.vote_average && (
+                        <p className="rating">Rating: {details.vote_average.toFixed(1)}/10</p>
+                    )}
                 </div>
             </div>
 

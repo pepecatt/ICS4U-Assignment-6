@@ -8,33 +8,37 @@ function GenresView() {
     const { id } = useParams();
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
+    const [previousId, setPreviousId] = useState(28);
     const navigate = useNavigate();
     const genreNames = {
         28: "Action",
         12: "Adventure",
         16: "Animation",
         80: "Comedy",
-        10770: "TV",
+        14: "Fantasy",
         36: "Horror",
         9648: "Mystery",
-        14: "Fantasy",
         10402: "Music",
         53: "Thriller",
+        10770: "TV"
     };
     const genreName = genreNames[id];
-    console.log(genreName);
 
     useEffect(() => {
+        window.scrollTo(0, 0); 
+        if (id !== previousId) {
+            setPage(1);
+            setPreviousId(id);
+        }
+
         async function getMovies() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_TMDB_KEY}&with_genres=${id}&page=${page}`
             );
-            console.log(response.data.results);
             setMovies(response.data.results);
             setTotalPages(response.data.total_pages);
         }
         getMovies();
-
     }, [id, page]);
 
     function nextPage() {
