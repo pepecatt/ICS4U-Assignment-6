@@ -44,22 +44,25 @@ function DetailedView() {
             <div className="trailers-section">
                 <h2>Trailers</h2>
                 <div className="trailers-grid">
-                    {details.videos && details.videos.results.map((trailer) => (
-                        <div key={trailer.id} className="trailer-tile">
-                            <a
-                                href={`https://www.youtube.com/watch?v=${trailer.key}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    className="trailer-thumbnail"
-                                    src={`https://img.youtube.com/vi/${trailer.key}/0.jpg`}
-                                    alt={trailer.name}
-                                />
-                                <h3>{trailer.name}</h3>
-                            </a>
-                        </div>
-                    ))}
+                    {details.videos && details.videos.results
+                        .filter(trailer => trailer.type === 'Trailer' || trailer.type === 'Teaser') // Filter for 'Trailer' or 'Teaser'
+                        .map((trailer) => (
+                            <div key={trailer.id} className="trailer-tile">
+                                <a
+                                    href={`https://www.youtube.com/watch?v=${trailer.key}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        className="trailer-thumbnail"
+                                        src={`https://img.youtube.com/vi/${trailer.key}/0.jpg`}
+                                        alt={trailer.name}
+                                    />
+                                    <h3>{trailer.name}</h3>
+                                </a>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </>
