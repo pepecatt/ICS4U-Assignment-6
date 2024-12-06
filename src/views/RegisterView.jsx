@@ -1,42 +1,60 @@
 import { useNavigate } from "react-router-dom";
+import { useStoreContext } from '../context';
 import "./RegisterView.css";
 
 function RegisterView() {
-    const navigate = useNavigate();
+	const firstName = useRef('');
+	const { setFirstName } = useStoreContext();
+	const lastName = useRef('');
+	const { setLastName } = useStoreContext();
+	const email = useRef('');
+	const { setEmail } = useStoreContext();
+	const password = useRef('');
+	const confirmPassword = useRef('');
+	const { setPassword } = useStoreContext();
+	const navigate = useNavigate();
 
-    return (
-        <div className="register-container">
-            <h1 className="Popflix">Popflix</h1>
+	function login(event) {
+		event.preventDefault();
+		if (confirmPassword.equalsTo(password)) {
+			
+		}
+	}
 
-            <div className='register'>
-                <form action="#">
-                    <label>Create an Account</label>
-                    <input
-                        type="text"
-                        placeholder="First Name"
-                        required />
-                    <input
-                        type="text"
-                        placeholder="Last Name"
-                        required />
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        required />
-                    <input
-                        type="text"
-                        placeholder="Password"
-                        required />
-                    <input
-                        type="text"
-                        placeholder="Confirm Password"
-                        required />
-                    <button type="submit">Register</button>
-                </form>
-                <p onClick={() => { navigate(`/login`) }}>Already have an account? <a href="#">Login</a></p>
-            </div>
-        </div>
-    )
+	return (
+		<div className="register-container">
+			<form onSubmit={(event) => { login(event) }}>
+				<label>Create an Account</label>
+				<input
+					type="text"
+					placeholder="First Name"
+					ref={firstName}
+					required />
+				<input
+					type="text"
+					placeholder="Last Name"
+					ref={lastName}
+					required />
+				<input
+					type="text"
+					placeholder="Email"
+					ref={email}
+					required />
+				<input
+					type="text"
+					placeholder="Password"
+					ref={password}
+					required />
+				<input
+					type="text"
+					placeholder="Confirm Password"
+					ref={confirmPassword}
+					required />
+				<button type="submit">Register</button>
+			</form>
+			<p onClick={() => { navigate(`/login`) }}>Already have an account? <a href="#">Login</a></p>
+		</div>
+	)
 }
 
 export default RegisterView;

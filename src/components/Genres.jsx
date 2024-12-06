@@ -14,7 +14,6 @@ function Genres(props) {
 
     return (
         <>
-            <h1 className="Popflix">Popflix</h1>
             <div className='genre-container'>
                 <h2>Genres</h2>
                 <ol>

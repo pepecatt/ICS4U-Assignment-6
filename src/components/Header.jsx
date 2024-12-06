@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
+import React from 'react';
 
 function Header() {
     const navigate = useNavigate();

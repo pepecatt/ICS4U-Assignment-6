@@ -64,15 +64,3 @@ input:focus {
 .login-container button:hover {
     background-color: rgb(187, 11, 20);
 }
-
-.Popflix {
-    color: rgb(124, 113, 113);
-    text-shadow: 1px 1px 3px rgb(78, 50, 50);
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 35px;
-    position: absolute;
-    left: 10px;
-    top: 5px;
-}
