@@ -54,8 +54,9 @@ body {
 }
 
 .page-number {
+    font-family: arial;
     font-size: 20px;
-    color: #a1a0a0;
+    color: #dfdddd;
     text-align: center; 
 }
 

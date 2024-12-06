@@ -15,7 +15,6 @@ function App() {
           <Route path="" element={<HomeView />} />
           <Route path="/register" element={<RegisterView />} />
           <Route path="/login" element={<LoginView />} />
-          
           <Route path="/movies" element={<MovieView />} >
             <Route path="genre/:id" element={<GenreView />} />
             <Route path="details/:id" element={<DetailedView />} />

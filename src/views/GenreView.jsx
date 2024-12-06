@@ -14,13 +14,13 @@ function GenresView() {
         28: "Action",
         12: "Adventure",
         16: "Animation",
-        80: "Comedy",
+        35: "Comedy",
+        80: "Crime",
         14: "Fantasy",
         36: "Horror",
         9648: "Mystery",
         10402: "Music",
-        53: "Thriller",
-        10770: "TV"
+        53: "Thriller"
     };
     const genreName = genreNames[id];
 

@@ -6,13 +6,13 @@ function MovieView() {
         { id: 28, genre: "Action" },
         { id: 12, genre: "Adventure" },
         { id: 16, genre: "Animation" },
-        { id: 80, genre: "Comedy" },
+        { id: 35, genre: "Comedy" },
+        { id: 80, genre: "Crime" },
         { id: 14, genre: "Fantasy" },
         { id: 36, genre: "Horror" },
         { id: 9648, genre: "Mystery" },
         { id: 10402, genre: "Music" },
-        { id: 53, genre: "Thriller" },
-        { id: 10770, genre: "TV" }
+        { id: 53, genre: "Thriller" }
     ];
 
     return (

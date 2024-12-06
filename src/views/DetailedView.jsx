@@ -45,7 +45,7 @@ function DetailedView() {
                 <h2>Trailers</h2>
                 <div className="trailers-grid">
                     {details.videos && details.videos.results
-                        .filter(trailer => trailer.type === 'Trailer' || trailer.type === 'Teaser') // Filter for 'Trailer' or 'Teaser'
+                        .filter(trailer => trailer.type === 'Trailer' || trailer.type === 'Teaser')
                         .map((trailer) => (
                             <div key={trailer.id} className="trailer-tile">
                                 <a
