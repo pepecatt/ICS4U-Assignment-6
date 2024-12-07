@@ -1,20 +1,20 @@
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 import { useStoreContext } from '../context';
 import './LoginView.css';
 
 function LoginView() {
+	const { email, password, genreList } = useStoreContext();
 	const enteredEmail = useRef('');
-	const { email } = useStoreContext();
 	const enteredPassword = useRef('');
-	const { password } = useStoreContext();
 	const navigate = useNavigate();
 
 	function login(event) {
 		event.preventDefault();
-		if (enteredEmail == email && enteredPassword == password) { // retrieve password from context
-			navigate("/movies/genre");
+		if (enteredEmail == email && enteredPassword == password) {
+			navigate(`/movies/genre/${genreList[0].id}`);
 		} else {
-			alert("Your email or psasword input is incorrect!");
+			alert("Your email or password input is incorrect!");
 		}
 	}
 

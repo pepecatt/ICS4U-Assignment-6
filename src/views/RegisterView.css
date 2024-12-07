@@ -5,6 +5,20 @@
     flex-direction: column;
     font-family: arial;
     align-items: center;
+    margin: auto;
+}
+
+form {
+    margin-top: 150px;
+}
+
+.createAccount {
+    font-family: "Karla";
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #f0f0f0;
+    letter-spacing: 1px;
 }
 
 .register-container button {
@@ -22,9 +36,24 @@
     background-color: rgb(187, 11, 20);
 }
 
-.register-container p {
-    color: rgb(156, 127, 127);
+.genreLabel {
     font-family: "Karla";
-    margin-left: 5px;
-    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #f0f0f0;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.genresList {
+    margin-top: 0px;
+}
+
+.genresList label {
+    color: white;
+    font-family: "Karla";
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: block;
 }
