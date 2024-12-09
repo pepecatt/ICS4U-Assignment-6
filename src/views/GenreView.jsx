@@ -6,11 +6,6 @@ import "./GenreView.css";
 
 function GenresView() {
     const { genreList, currentGenre } = useStoreContext();
-    if (genreList.length < 1) {
-        return;
-    }
-    console.log("In!", genreList[0].genre); //sdogihadsui8fgadus
-    console.log(currentGenre); //sdogihadsui8fgadus
     const [genre, setGenre] = useState(genreList[0].genre);
 	const [movies, setMovies] = useState([]);
 	const { id } = useParams();
