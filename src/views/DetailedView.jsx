@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-
+import Header from "../components/Header";
 import "./DetailedView.css";
 
 function DetailedView() {
     const { id } = useParams();
     const [details, setDetails] = useState([]);
+    const [cartAddedorNah, setCart] = useState("Add to Cart");
 
     useEffect(() => {
         async function getDetails() {
@@ -18,8 +19,13 @@ function DetailedView() {
         getDetails();
     }, [id]);
 
+    function addToCart() {
+        return;
+    }
+
     return (
         <>
+            <Header />
             <div className="detail-container">
                 {details.poster_path && (
                     <img
@@ -38,6 +44,7 @@ function DetailedView() {
                     {details.vote_average && (
                         <p className="rating">Rating: {details.vote_average.toFixed(1)}/10</p>
                     )}
+                    <button className="addToCart" onClick={() => { addToCart() }}>{cartAddedorNah}</button>
                 </div>
             </div>
 

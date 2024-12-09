@@ -36,11 +36,11 @@ function RegisterView() {
 
 	function login(event) {
 		event.preventDefault();
-
+		/* for testing only
 		if (confirmPassword.current.value !== password.current.value) {
 			alert("Your passwords don't match!");
 			return;
-		}
+		} */
 		
 		// checks if every box is checked, makes an array storing the id of
 		// every genre that is selected
@@ -52,11 +52,6 @@ function RegisterView() {
 			alert("You need to select at least 10 genres!");
 			return;
 		}
-
-		setFirstName(firstName);
-		setLastName(lastName);
-		setEmail(email);
-		setPassword(password);
 		
 		// sorts the array by alphabetical order (not by id order)
 		// -> will use this array in Genre.jsx so that its in alphabetical order!
@@ -68,9 +63,18 @@ function RegisterView() {
     //const sortedGenreNames = sortedGenres.map((genre) => genre.genre);
 
     console.log("Selected Genres:", sortedGenres);
+		setInformation();
 		setGenreList(sortedGenres);
-        setCurrentGenre(sortedGenres[0].genre);
-		navigate(`/movies/genre/${sortedGenres[0].id}`); // ***change to login view
+    setCurrentGenre(sortedGenres[0].genre);
+		navigate(`/login`); // ***change to login view
+	}
+
+	function setInformation() {
+		setFirstName(firstName.current.value);
+		setLastName(lastName.current.value);
+		setEmail(email.current.value);
+		setPassword(password.current.value);
+		console.log(password.current.value);
 	}
 
 	return (

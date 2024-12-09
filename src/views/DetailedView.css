@@ -56,6 +56,28 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.movie-details button {
+	font-family: "Rubik";
+	background-color: red;
+	border-width: 1px;
+	border-radius: 3px;
+	height: 40px;
+    width: 110px;
+	cursor: pointer;
+	position: absolute;
+    margin-top: 40px;
+
+	border-style: solid;
+	color: white;
+	font-size: 17px;
+
+	transition: background-color 0.3s, color 0.1s;
+}
+
+.movie-details button:hover {
+    background-color: rgb(204, 2, 2)
+}
+
 .trailers-section {
     padding: 20px;
     position: relative;
@@ -96,7 +118,7 @@
 }
 
 .trailer-tile:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 

@@ -5,15 +5,19 @@ import { useStoreContext } from '../context';
 import "./GenreView.css";
 
 function GenresView() {
-    const { genreList, currentGenre } = useStoreContext();
-    const [genre, setGenre] = useState(genreList[0].genre);
+	const { genreList, currentGenre } = useStoreContext();
+	//const [genre, setGenre] = useState(genreList[0].genre);
 	const [movies, setMovies] = useState([]);
 	const { id } = useParams();
 	const [page, setPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(1);
-	const [previousId, setPreviousId] = useState(genreList[0].id);
 	const navigate = useNavigate();
 
+	if (genreList.length < 1) {
+    return <div>Loading...</div>;
+  }
+	const [previousId, setPreviousId] = useState(genreList[0].id);
+	
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		if (id !== previousId) {

@@ -4,17 +4,23 @@ import { useStoreContext } from '../context';
 import './LoginView.css';
 
 function LoginView() {
-	const { email, password, genreList } = useStoreContext();
+	const { email, password, genreList, setLoggedIn } = useStoreContext();
 	const enteredEmail = useRef('');
 	const enteredPassword = useRef('');
 	const navigate = useNavigate();
 
 	function login(event) {
 		event.preventDefault();
-		if (enteredEmail == email && enteredPassword == password) {
+		if (enteredPassword.current.value == "d") {    // for testing only
 			navigate(`/movies/genre/${genreList[0].id}`);
+			setLoggedIn(true);
+		}
+		if (enteredEmail.current.value == email && enteredPassword.current.value == password) {
+			navigate(`/movies/genre/${genreList[0].id}`);
+			setLoggedIn(true);
 		} else {
-			alert("Your email or password input is incorrect!");
+			//alert("Your email or password input is incorrect!");
+			return;
 		}
 	}
 
