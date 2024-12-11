@@ -4,7 +4,7 @@ import { useStoreContext } from '../context';
 import './LoginView.css';
 
 function LoginView() {
-	const { email, password, genreList, setLoggedIn } = useStoreContext();
+	const { email, setEmail, password, setPassword, genreList, setLoggedIn } = useStoreContext();
 	const enteredEmail = useRef('');
 	const enteredPassword = useRef('');
 	const navigate = useNavigate();

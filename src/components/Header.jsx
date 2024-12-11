@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import { useStoreContext } from '../context';
 import React from 'react';
 import './Header.css';
-import cartImage from "../assets/cart.png";
+import cartImage from "../assets/popcornbag.png";
 
 function Header() {
-	const { loggedIn, setLoggedIn } = useStoreContext();
+	const { loggedIn, setLoggedIn, cartOpen, setCartOpen } = useStoreContext();
 	const navigate = useNavigate();
 
 	function loginPage() {
@@ -18,8 +18,12 @@ function Header() {
 	}
 
 	function cart() {
-		navigate(`..`);
-		
+		//navigate(`.`);
+        if (cartOpen) {
+            setCartOpen(false);
+        } else {
+            setCartOpen(true);
+        }
 	}
 
 	return (

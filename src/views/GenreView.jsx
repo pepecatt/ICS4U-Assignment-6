@@ -5,7 +5,7 @@ import { useStoreContext } from '../context';
 import "./GenreView.css";
 
 function GenresView() {
-	const { genreList, currentGenre } = useStoreContext();
+	const { genreList, currentGenre, cartOpen, setCartOpen } = useStoreContext();
 	//const [genre, setGenre] = useState(genreList[0].genre);
 	const [movies, setMovies] = useState([]);
 	const { id } = useParams();
@@ -49,6 +49,7 @@ function GenresView() {
 
 	function loadMovie(id) {
 		navigate(`/movies/details/${id}`);
+        setCartOpen(false);
 	}
 
 	return (

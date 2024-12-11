@@ -1,59 +1,59 @@
 .register-container {
-    background-color: rgb(27, 18, 18);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: arial;
-    align-items: center;
-    margin: auto;
+  background-color: rgb(27, 18, 18);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: arial;
+  align-items: center;
+  margin: auto;
 }
 
 form {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
 .createAccount {
-    font-family: "Karla";
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    color: #f0f0f0;
-    letter-spacing: 1px;
+  font-family: "Karla";
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+  letter-spacing: 1px;
 }
 
 .register-container button {
-    padding: 12px;
-    background-color: rgb(218, 4, 4);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 12px;
+  background-color: rgb(218, 4, 4);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .register-container button:hover {
-    background-color: rgb(187, 11, 20);
+  background-color: rgb(187, 11, 20);
 }
 
 .genreLabel {
-    font-family: "Karla";
-    font-size: 25px;
-    font-weight: 500;
-    color: #f0f0f0;
-    letter-spacing: 1px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+  font-family: "Karla";
+  font-size: 25px;
+  font-weight: 500;
+  color: #f0f0f0;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .genresList {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 .genresList label {
-    color: white;
-    font-family: "Karla";
-    font-size: 20px;
-    margin-bottom: 15px;
-    display: block;
+  color: white;
+  font-family: "Karla";
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: block;
 }

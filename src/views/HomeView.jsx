@@ -5,20 +5,20 @@ import Footer from "../components/Footer";
 import "./HomeView.css";
 
 function HomeView() {
-    return (
-        <>
-            <div className="footerBackground"></div>
-            <div className="spotlight"></div>
-            <div className="mainPage">
-                <Feature />
-                <Hero />
+  return (
+    <>
+      <div className="footerBackground"></div>
+      <div className="spotlight"></div>
+      <div className="mainPage">
+        <Feature />
+        <Hero />
 
-                <Header />
-            </div>
-            <Footer />
+        <Header />
+      </div>
+      <Footer />
 
-        </>
-    )
+    </>
+  )
 }
 
 export default HomeView;
