@@ -12,6 +12,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+		z-index: 100;
 }
 
 .Popflix {
@@ -75,5 +76,21 @@
 
 .cart:hover {
 	border-color: rgb(233, 11, 11);
+	border-style: solid;
+}
+
+.settings {
+	top: 10px;
+	right: 200px;
+	width: 50px;
+}
+
+.settings img {
+	width: 40px;
+	margin-top: -1px;
+}
+
+.settings:hover {
+	border-color: rgb(194, 152, 152);
 	border-style: solid;
 }

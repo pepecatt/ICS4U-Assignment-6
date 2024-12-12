@@ -2,7 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import { useStoreContext } from '../context';
 import React from 'react';
 import './Header.css';
-import cartImage from "../assets/popcornbag.png";
+import cartImage from "../assets/cart.png";
+import settingsImage from "../assets/settings.png";
 
 function Header() {
 	const { loggedIn, setLoggedIn, cartOpen, setCartOpen } = useStoreContext();
@@ -18,12 +19,15 @@ function Header() {
 	}
 
 	function cart() {
-		//navigate(`.`);
-        if (cartOpen) {
-            setCartOpen(false);
-        } else {
-            setCartOpen(true);
-        }
+		if (cartOpen) {
+			setCartOpen(false);
+		} else {
+			setCartOpen(true);
+		}
+	}
+
+	function settings() {
+		return;
 	}
 
 	return (
@@ -37,6 +41,9 @@ function Header() {
 					<button className="logout" onClick={() => { logout() }}>Log Out</button>
 					<button className="cart" onClick={() => { cart() }}>
 						<img src={cartImage}></img>
+					</button>
+					<button className="settings" onClick={() => { settings() }}>
+						<img src={settingsImage}></img>
 					</button>
 				</div>
 			)}

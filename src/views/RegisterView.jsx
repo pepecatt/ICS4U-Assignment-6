@@ -36,11 +36,6 @@ function RegisterView() {
 
 	function login(event) {
 		event.preventDefault();
-		/* for testing only
-		if (confirmPassword.current.value !== password.current.value) {
-			alert("Your passwords don't match!");
-			return;
-		} */
 		
 		// checks if every box is checked, makes an array storing the id of
 		// every genre that is selected
@@ -54,19 +49,14 @@ function RegisterView() {
 		}
 		
 		// sorts the array by alphabetical order (not by id order)
-		// -> will use this array in Genre.jsx so that its in alphabetical order!
 		const sortedGenres = selectedGenres
       .map((genreId) => genres.find((genre) => genre.id === genreId)) // Find genre objects by ID
       .sort((a, b) => a.genre.localeCompare(b.genre)); // Sort by genre name alphabetically
 
-		// Step 3: Extract the sorted genre names (if needed)
-    //const sortedGenreNames = sortedGenres.map((genre) => genre.genre);
-
-    console.log("Selected Genres:", sortedGenres);
 		setInformation();
 		setGenreList(sortedGenres);
     setCurrentGenre(sortedGenres[0].genre);
-		navigate(`/login`); // ***change to login view
+		navigate(`/login`);
 	}
 
 	function setInformation() {
@@ -74,7 +64,6 @@ function RegisterView() {
 		setLastName(lastName.current.value);
 		setEmail(email.current.value);
 		setPassword(password.current.value);
-		console.log(password.current.value);
 	}
 
 	return (
@@ -115,7 +104,7 @@ function RegisterView() {
 								<input 
 								type='checkbox' 
 								id="check"
-								ref={(el) => (checkboxesRef.current[item.id] = el)} // Handle change
+								ref={(el) => (checkboxesRef.current[item.id] = el)}
 								/> {item.genre}
 							</label>
 						);
