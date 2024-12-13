@@ -1,14 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
 body {
   background-color: rgb(27, 18, 18);
+}
+
+.hello {
+  font-family: 'Arial', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+  position: relative;
+  left: 225px;
+  display: inline-block;
+  
+  /* Gradient background color for text */
+  background: linear-gradient(120deg, #732121, #bfafaf);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .genreView-container h1 {
   font-size: 50px;
   font-weight: bold;
   color: #dedede;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
   position: relative;
   left: 225px;

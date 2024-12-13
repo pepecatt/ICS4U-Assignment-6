@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 100px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -19,11 +20,28 @@
 }
 
 /* User info label (current first and last name) */
-.userInfo {
+.userInfo, .userEmail {
   font-size: 18px;
-  color: #555;
-  margin: 5px 0;
+  color: #a7a7a7;
   font-family: arial;
+  max-width: 270px;
+  flex: 1;
+}
+
+.userInfoDiv {
+  display: flex;
+  align-items: center; /* Vertically center the elements */
+  gap: 10px; /* Adds space between the label and the button */
+}
+
+.changeButton {
+  width: 60px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.userEmail {
+  margin-bottom: 3px;
 }
 
 /* Input fields for new first and last name */
@@ -36,7 +54,7 @@
 }
 
 /* Button (submit) styling */
-.settings-container button {
+.submit {
   background-color: rgb(230, 0, 0); /* Green */
   color: white;
   padding: 10px 20px;
@@ -49,6 +67,6 @@
 }
 
 /* Button hover effect */
-.settings-container button:hover {
+.submit:hover {
   background-color: #ad0000; /* Slightly darker green on hover */
 }

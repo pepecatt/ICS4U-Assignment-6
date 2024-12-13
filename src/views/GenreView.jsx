@@ -5,7 +5,7 @@ import { useStoreContext } from '../context';
 import "./GenreView.css";
 
 function GenresView() {
-	const { genreList, currentGenre, cartOpen, setCartOpen } = useStoreContext();
+	const { genreList, currentGenre, cartOpen, setCartOpen, firstName } = useStoreContext();
 	//const [genre, setGenre] = useState(genreList[0].genre);
 	const [movies, setMovies] = useState([]);
 	const { id } = useParams();
@@ -49,12 +49,13 @@ function GenresView() {
 
 	function loadMovie(id) {
 		navigate(`/movies/details/${id}`);
-        setCartOpen(false);
+    setCartOpen(false);
 	}
 
 	return (
 		<div className="genreView-container">
-			<h1>{currentGenre} Movies</h1>
+			<h2 className="hello">Welcome, {firstName}!</h2>
+      <h1>{currentGenre} Movies</h1>
 			<div className='movie-list'>
 				{movies.map((movie) => (
 					<div key={movie.id} className="movie-card" onClick={() => { loadMovie(movie.id) }}>

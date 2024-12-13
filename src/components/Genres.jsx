@@ -6,8 +6,6 @@ function Genres() {
 	const { genreList, setCurrentGenre, setCartOpen } = useStoreContext();
 	const navigate = useNavigate();
 
-	console.log(genreList);
-
 	function click(item) {
 		navigate(`genre/${item.id}`);
 		setCurrentGenre(item.genre);

@@ -8,7 +8,8 @@ import settingsImage from "../assets/settings.png";
 function Header() {
 	const { loggedIn, setLoggedIn, 
 		cartOpen, setCartOpen, 
-		settingsOpen, setSettingsOpen 
+		settingsOpen, setSettingsOpen,
+    genreList 
 	} = useStoreContext();
 	const navigate = useNavigate();
 
@@ -32,10 +33,11 @@ function Header() {
 	function settings() {
 		if (settingsOpen) {
 			setSettingsOpen(false);
+      navigate(`/movies/genre/${genreList[0].id}`);
 		} else {
 			setSettingsOpen(true);
+      navigate(`/movies/settings`);
 		}
-		navigate('/settings');
 	}
 
 	return (
