@@ -6,7 +6,10 @@ import cartImage from "../assets/cart.png";
 import settingsImage from "../assets/settings.png";
 
 function Header() {
-	const { loggedIn, setLoggedIn, cartOpen, setCartOpen } = useStoreContext();
+	const { loggedIn, setLoggedIn, 
+		cartOpen, setCartOpen, 
+		settingsOpen, setSettingsOpen 
+	} = useStoreContext();
 	const navigate = useNavigate();
 
 	function loginPage() {
@@ -27,7 +30,12 @@ function Header() {
 	}
 
 	function settings() {
-		return;
+		if (settingsOpen) {
+			setSettingsOpen(false);
+		} else {
+			setSettingsOpen(true);
+		}
+		navigate('/settings');
 	}
 
 	return (

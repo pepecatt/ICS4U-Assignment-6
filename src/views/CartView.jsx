@@ -6,7 +6,6 @@ function CartView() {
 	const { cart, setCart, cartOpen } = useStoreContext();
 
 	function removeMovie(removedItem) {
-		const updatedCart = cart.filter(item => item !== removedItem);
 		setCart(cart.filter(item => item !== removedItem));
 	}
 

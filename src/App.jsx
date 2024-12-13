@@ -6,6 +6,7 @@ import MovieView from "./views/MovieView";
 import GenreView from "./views/GenreView";
 import DetailedView from "./views/DetailedView";
 import CartView from "../src/views/CartView";
+import SettingsView from "../src/views/SettingsView";
 import { StoreProvider } from './context';
 import './App.css';
 
@@ -19,10 +20,12 @@ function App() {
 					<Route path="/register" element={<RegisterView />} />
 					<Route path="/login" element={<LoginView />} />
 					<Route path="/movies" element={<MovieView />} >
-                        <Route path="genre/:id" element={<GenreView />} />
+						<Route path="genre/:id" element={<GenreView />} />
 						<Route path="details/:id" element={<DetailedView />} />
-                        <Route path="cart" element={<CartView />} />
+						<Route path="cart" element={<CartView />} />
+						
 					</Route>
+					<Route path="/settings" element={<SettingsView />} />
 				</Routes>
 			</BrowserRouter>
 		</StoreProvider>

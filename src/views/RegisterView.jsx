@@ -4,7 +4,10 @@ import { useStoreContext } from '../context';
 import "./RegisterView.css";
 
 function RegisterView() {
-	const { setFirstName, setLastName, setEmail, setPassword, setGenreList, setCurrentGenre } = useStoreContext();
+	const { setFirstName, setLastName, 
+		setEmail, setPassword, 
+		setGenreList, setCurrentGenre,
+	} = useStoreContext();
 
 	const firstName = useRef('');
 	const lastName = useRef('');
