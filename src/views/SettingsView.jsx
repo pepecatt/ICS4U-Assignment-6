@@ -41,9 +41,9 @@ function SettingsView() {
       .filter((genreId) => checkboxesRef.current[genreId].checked)
       .map(Number);
 
-    if (selectedGenres.length >= 1 && selectedGenres.length < 3) { // **change to 10
+    if (selectedGenres.length >= 1 && selectedGenres.length < 10) {
       alert("You need to select at least 10 genres!");
-    } else if (selectedGenres.length >= 3) { // **changet o 10
+    } else if (selectedGenres.length >= 10) {
       const sortedGenres = selectedGenres
       .map((genreId) => genres.find((genre) => genre.id === genreId))
       .sort((a, b) => a.genre.localeCompare(b.genre));

@@ -16,7 +16,7 @@ function App() {
 		<StoreProvider>
 			<BrowserRouter>
 				<Routes>
-					<Route path="" element={<HomeView />} />
+					<Route path="/home" element={<HomeView />} />
 					<Route path="/register" element={<RegisterView />} />
 					<Route path="/login" element={<LoginView />} />
 					<Route path="/movies" element={<MovieView />} >

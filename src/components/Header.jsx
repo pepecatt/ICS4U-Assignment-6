@@ -18,7 +18,7 @@ function Header() {
 	}
 
 	function logout() {
-		navigate(`..`);
+		navigate(`/home`);
 		setLoggedIn(false);
 	}
 

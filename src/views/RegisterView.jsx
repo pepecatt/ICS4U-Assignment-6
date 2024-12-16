@@ -44,17 +44,17 @@ function RegisterView() {
 		// every genre that is selected
 		const selectedGenres = Object.keys(checkboxesRef.current) 
       .filter((genreId) => checkboxesRef.current[genreId].checked)
-      .map(Number); // Convert string IDs back to numbers
+      .map(Number); // onvert string IDs back to numbers
 
-		if (selectedGenres.length < 2) { // ***change to 10
+		if (selectedGenres.length < 10) {
 			alert("You need to select at least 10 genres!");
 			return;
 		}
 		
 		// sorts the array by alphabetical order (not by id order)
 		const sortedGenres = selectedGenres
-      .map((genreId) => genres.find((genre) => genre.id === genreId)) // Find genre objects by ID
-      .sort((a, b) => a.genre.localeCompare(b.genre)); // Sort by genre name alphabetically
+      .map((genreId) => genres.find((genre) => genre.id === genreId))
+      .sort((a, b) => a.genre.localeCompare(b.genre)); // sort by genre name alphabetically
 
 		setInformation();
 		setGenreList(sortedGenres);
@@ -84,7 +84,7 @@ function RegisterView() {
 					ref={lastName}
 					required />
 				<input
-					type="text" // ***change to email
+					type="email"
 					placeholder="Email"
 					ref={email}
 					required />
