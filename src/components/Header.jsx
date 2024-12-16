@@ -6,10 +6,11 @@ import cartImage from "../assets/cart.png";
 import settingsImage from "../assets/settings.png";
 
 function Header() {
-	const { loggedIn, setLoggedIn, 
-		cartOpen, setCartOpen, 
+	const {
+		loggedIn, setLoggedIn,
+		cartOpen, setCartOpen,
 		settingsOpen, setSettingsOpen,
-    genreList 
+		genreList
 	} = useStoreContext();
 	const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ function Header() {
 	}
 
 	function logout() {
-		navigate(`/home`);
+		navigate(`/`);
 		setLoggedIn(false);
 	}
 
@@ -33,10 +34,10 @@ function Header() {
 	function settings() {
 		if (settingsOpen) {
 			setSettingsOpen(false);
-      navigate(`/movies/genre/${genreList[0].id}`);
+			navigate(`/movies/genre/${genreList[0].id}`);
 		} else {
 			setSettingsOpen(true);
-      navigate(`/movies/settings`);
+			navigate(`/movies/settings`);
 		}
 	}
 

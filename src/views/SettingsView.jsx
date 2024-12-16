@@ -3,7 +3,8 @@ import { useStoreContext } from "../context";
 import "./SettingsView.css";
 
 function SettingsView() {
-  const { firstName, setFirstName,
+  const {
+    firstName, setFirstName,
     lastName, setLastName,
     email, setCurrentGenre,
     genreList, setGenreList,
@@ -45,24 +46,24 @@ function SettingsView() {
       alert("You need to select at least 10 genres!");
     } else if (selectedGenres.length >= 10) {
       const sortedGenres = selectedGenres
-      .map((genreId) => genres.find((genre) => genre.id === genreId))
-      .sort((a, b) => a.genre.localeCompare(b.genre));
+        .map((genreId) => genres.find((genre) => genre.id === genreId))
+        .sort((a, b) => a.genre.localeCompare(b.genre));
 
       setGenreList(sortedGenres);
       setCurrentGenre(sortedGenres[0].genre);
     }
-    
+
     setInformation();
   }
 
   function setInformation() {
-		if (newFirstName !== null) {
+    if (newFirstName !== null) {
       setFirstName(newFirstName.current.value);
     }
     if (newLastName !== null) {
       setLastName(newLastName.current.value);
     }
-	}
+  }
 
   const firstNameChange = () => {
     setChangeFirst(!changeFirstName);
@@ -74,51 +75,51 @@ function SettingsView() {
 
   return (
     <>
-        <div className="settings-container">
-          <form onSubmit={settings}>
-            <label className="settingsLabel">Settings</label>
-            <label className="userEmail">Email: {email}</label>
-            <div className="userInfoDiv">
-              <label className="userInfo">First Name: {firstName}</label>
-              <button className='changeButton' type="button" onClick={firstNameChange}>Change</button>
-            </div>
-            {changeFirstName && (
-                <input
-                  type="text"
-                  placeholder="New First Name"
-                  ref={newFirstName}
-                />
-            )}
-            <div className="userInfoDiv">
-              <label className="userInfo">Last Name: {lastName}</label>
-              <button className='changeButton' type="button" onClick={lastNameChange}>Change</button>
-            </div>
-            {changeLastName && (
-                <input
-                  type="text"
-                  placeholder="New Last Name"
-                  ref={newLastName}
-                />
-            )}
+      <div className="settings-container">
+        <form onSubmit={settings}>
+          <label className="settingsLabel">Settings</label>
+          <label className="userEmail">Email: {email}</label>
+          <div className="userInfoDiv">
+            <label className="userInfo">First Name: {firstName}</label>
+            <button className='changeButton' type="button" onClick={firstNameChange}>Change</button>
+          </div>
+          {changeFirstName && (
+            <input
+              type="text"
+              placeholder="New First Name"
+              ref={newFirstName}
+            />
+          )}
+          <div className="userInfoDiv">
+            <label className="userInfo">Last Name: {lastName}</label>
+            <button className='changeButton' type="button" onClick={lastNameChange}>Change</button>
+          </div>
+          {changeLastName && (
+            <input
+              type="text"
+              placeholder="New Last Name"
+              ref={newLastName}
+            />
+          )}
 
-            <label className="genreLabel">Genres:</label>
-            <div className="genresList">
-              {genres.map((item) => {
-                const isChecked = genreList.includes(item.genre);
-                return (
-                  <label key={item.id}>
-                    <input
-                      type='checkbox'
-                      id="check"
-                      ref={(el) => (checkboxesRef.current[item.id] = el)}
-                    /> {item.genre}
-                  </label>
-                );
-              })}
-            </div>
-            <button className="submit" type="submit" onChange={settings}>Submit Changes</button>
-          </form>
-        </div>
+          <label className="genreLabel">Genres:</label>
+          <div className="genresList">
+            {genres.map((item) => {
+              const isChecked = genreList.includes(item.genre);
+              return (
+                <label key={item.id}>
+                  <input
+                    type='checkbox'
+                    id="check"
+                    ref={(el) => (checkboxesRef.current[item.id] = el)}
+                  /> {item.genre}
+                </label>
+              );
+            })}
+          </div>
+          <button className="submit" type="submit" onChange={settings}>Submit Changes</button>
+        </form>
+      </div>
     </>
 
   )

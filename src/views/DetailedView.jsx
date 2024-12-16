@@ -9,7 +9,7 @@ function DetailedView() {
 	const { id } = useParams();
 	const { cart, setCart } = useStoreContext();
 	const [details, setDetails] = useState([]);
-	const [isInCart, setCartAdded] = useState(false); //fdfd
+	const [isInCart, setCartAdded] = useState(false);
 
 	useEffect(() => {
 		async function getDetails() {

@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from 'react';
-import { Map } from 'immutable';
 
 const StoreContext = createContext();
 

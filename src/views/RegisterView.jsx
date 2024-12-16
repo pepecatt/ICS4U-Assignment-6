@@ -4,8 +4,9 @@ import { useStoreContext } from '../context';
 import "./RegisterView.css";
 
 function RegisterView() {
-	const { setFirstName, setLastName, 
-		setEmail, setPassword, 
+	const {
+		setFirstName, setLastName,
+		setEmail, setPassword,
 		setGenreList, setCurrentGenre,
 	} = useStoreContext();
 
@@ -39,26 +40,26 @@ function RegisterView() {
 
 	function login(event) {
 		event.preventDefault();
-		
+
 		// checks if every box is checked, makes an array storing the id of
 		// every genre that is selected
-		const selectedGenres = Object.keys(checkboxesRef.current) 
-      .filter((genreId) => checkboxesRef.current[genreId].checked)
-      .map(Number); // onvert string IDs back to numbers
+		const selectedGenres = Object.keys(checkboxesRef.current)
+			.filter((genreId) => checkboxesRef.current[genreId].checked)
+			.map(Number); // convert string IDs back to numbers
 
 		if (selectedGenres.length < 10) {
 			alert("You need to select at least 10 genres!");
 			return;
 		}
-		
+
 		// sorts the array by alphabetical order (not by id order)
 		const sortedGenres = selectedGenres
-      .map((genreId) => genres.find((genre) => genre.id === genreId))
-      .sort((a, b) => a.genre.localeCompare(b.genre)); // sort by genre name alphabetically
+			.map((genreId) => genres.find((genre) => genre.id === genreId))
+			.sort((a, b) => a.genre.localeCompare(b.genre)); // sort by genre name alphabetically
 
 		setInformation();
 		setGenreList(sortedGenres);
-    setCurrentGenre(sortedGenres[0].genre);
+		setCurrentGenre(sortedGenres[0].genre);
 		navigate(`/login`);
 	}
 
@@ -104,10 +105,10 @@ function RegisterView() {
 					{genres.map((item) => {
 						return (
 							<label key={item.id}>
-								<input 
-								type='checkbox' 
-								id="check"
-								ref={(el) => (checkboxesRef.current[item.id] = el)}
+								<input
+									type='checkbox'
+									id="check"
+									ref={(el) => (checkboxesRef.current[item.id] = el)}
 								/> {item.genre}
 							</label>
 						);

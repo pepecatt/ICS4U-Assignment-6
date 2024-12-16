@@ -6,7 +6,6 @@ import "./GenreView.css";
 
 function GenresView() {
 	const { genreList, currentGenre, cartOpen, setCartOpen, firstName } = useStoreContext();
-	//const [genre, setGenre] = useState(genreList[0].genre);
 	const [movies, setMovies] = useState([]);
 	const { id } = useParams();
 	const [page, setPage] = useState(1);
