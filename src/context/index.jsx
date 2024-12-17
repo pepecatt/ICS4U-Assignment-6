@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import { Map } from 'immutable';
 
 const StoreContext = createContext();
 
@@ -7,7 +8,7 @@ export const StoreProvider = ({ children }) => {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [genreList, setGenreList] = useState([]);
+  const [genreList, setGenreList] = useState(Map());
   const [currentGenre, setCurrentGenre] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
   const [cart, setCart] = useState([]);

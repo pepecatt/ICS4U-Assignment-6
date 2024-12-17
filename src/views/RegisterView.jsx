@@ -8,6 +8,7 @@ function RegisterView() {
 		setFirstName, setLastName,
 		setEmail, setPassword,
 		setGenreList, setCurrentGenre,
+    setLoggedIn, genreList
 	} = useStoreContext();
 
 	const firstName = useRef('');
@@ -47,7 +48,7 @@ function RegisterView() {
 			.filter((genreId) => checkboxesRef.current[genreId].checked)
 			.map(Number); // convert string IDs back to numbers
 
-		if (selectedGenres.length < 10) {
+		if (selectedGenres.length < 2) {  // ** change to 10
 			alert("You need to select at least 10 genres!");
 			return;
 		}
@@ -60,7 +61,8 @@ function RegisterView() {
 		setInformation();
 		setGenreList(sortedGenres);
 		setCurrentGenre(sortedGenres[0].genre);
-		navigate(`/login`);
+		navigate(`/movies/genre/${genreList[0].id}`);
+		setLoggedIn(true);
 	}
 
 	function setInformation() {
